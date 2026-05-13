@@ -1,6 +1,6 @@
 # ToDo List - API REST
 
-API REST para gestionar una lista de tareas desarrollada con Spring Boot, JPA/Hibernate y Spring Security.
+API REST para gestionar una lista de tareas desarrollada con Spring Boot, JPA/Hibernate y Spring Security con JWT.
 
 ## Requisitos previos
 
@@ -57,4 +57,9 @@ La aplicacion carga datos iniciales automaticamente. Todos los usuarios tienen l
 
 ## Autenticacion
 
-La API usa **Basic Auth**. En Swagger, pulsa el boton "Authorize" e introduce el usuario y contraseña.
+La API usa **JWT (JSON Web Tokens)**. Para autenticarte:
+
+1. Haz una peticion POST a `/auth/login` con tu usuario y contraseña
+2. Recibirás un token JWT en la respuesta
+3. En Swagger, pulsa el boton "Authorize" y pega el token
+4. Ya puedes usar todos los endpoints protegidos
